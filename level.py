@@ -8,29 +8,38 @@ def choose_level(n_pregunta, p_level):
     if p_level == 1:
         # Cada pregunta es un nivel diferente
         if n_pregunta == 1:
-            return "Básico"
+            level = "basicas"
+            return level
         elif n_pregunta == 2:
-            return "Intermedio"
+            level = "intermedias"
+            return level
         elif n_pregunta == 3:
-            return "Avanzado"
+            level = "avanzadas"
+            return level
         else:
             raise ValueError("Número de pregunta fuera de rango")
     elif p_level == 2:
         if 1 <= n_pregunta <= 2:
-            return "Básico"
+            level = "basicas"
+            return level
         elif 3 <= n_pregunta <= 4:
-            return "Intermedio"
+            level = "intermedias"
+            return level
         elif 5 <= n_pregunta <= 6:
-            return "Avanzado"
+            level = "avanzadas"
+            return level
         else:
             raise ValueError("Número de pregunta fuera de rango")
     elif p_level == 3:
         if 1 <= n_pregunta <= 3:
-            return "Básico"
+            level = "basicas"
+            return level
         elif 4 <= n_pregunta <= 6:
-            return "Intermedio"
+            level = "intermedias"
+            return level
         elif 7 <= n_pregunta <= 9:
-            return "Avanzado"
+            level = "avanzadas"
+            return level
         else:
             raise ValueError("Número de pregunta fuera de rango")
     

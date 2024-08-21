@@ -75,20 +75,13 @@ def trivia():
             n_pregunta += 1
             
             # 4. Escoger las preguntas por nivel.
-            #Mostramos los niveles de la trivia
-            preguntas_basicas = [choose_q("basicas") for i in range(p_level)]
-            preguntas_intermedias = [choose_q("intermedias") for i in range(p_level)]
-            preguntas_avanzadas = [choose_q("avanzadas") for i in range(p_level)]
-
-            todas_preguntas = preguntas_basicas + preguntas_intermedias + preguntas_avanzadas
-            random.shuffle(todas_preguntas)
-
-            pregunta_actual = todas_preguntas[n_pregunta - 1]
+            level = choose_level(n_pregunta, p_level)
+            preguntas = choose_q(level)
 
             print(f'Pregunta {n_pregunta}:')
 
-            enunciado = pregunta_actual[0]
-            alternativas = pregunta_actual[1]
+            enunciado = preguntas[0]
+            alternativas = preguntas[1]
 
             # Imprimir el enunciado y sus alternativas en pantalla
             print_pregunta(enunciado, alternativas)

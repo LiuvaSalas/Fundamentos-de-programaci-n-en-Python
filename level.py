@@ -1,5 +1,15 @@
 def choose_level(n_pregunta, p_level):
-    
+    """
+    Determina el nivel de la pregunta y dependiendo del numero de pregunta que se este mostrando.
+
+    Parametros:
+    - n_pregunta: int, numero de pregunta que se esta mostrando.
+    - p_level: int, numero de preguntas por nivel que escogio el usuario.
+
+    Return:
+    - Devuelve el nivel correspondiente para extraer la pregunta segun el numero de pregunta que se esta mostrando.
+    """
+
     # Verificar que la cantidad de preguntas por nivel sea válida
     if p_level not in [1, 2, 3]:
         raise ValueError("La cantidad de preguntas por nivel debe ser 1, 2 o 3")
@@ -42,12 +52,13 @@ def choose_level(n_pregunta, p_level):
             return level
         else:
             raise ValueError("Número de pregunta fuera de rango")
-    
+
     return level
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # verificar resultados
-    print(choose_level(2, 2)) # básicas
-    print(choose_level(3, 2)) # intermedias
-    print(choose_level(7, 2)) # avanzadas
-    print(choose_level(4, 3)) # intermedias
+    print(choose_level(2, 2))  # básicas
+    print(choose_level(3, 2))  # intermedias
+    print(choose_level(7, 2))  # avanzadas
+    print(choose_level(4, 3))  # intermedias

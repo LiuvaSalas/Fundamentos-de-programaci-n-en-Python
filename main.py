@@ -1,9 +1,11 @@
 # No modificar
 from verify import verificar
 from question import choose_q
+import preguntas as p
 from print_preguntas import print_pregunta
 from level import choose_level
 from validador import validate
+import random
 import time
 import os
 import sys
